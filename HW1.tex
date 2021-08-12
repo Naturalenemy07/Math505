@@ -1,0 +1,172 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[papersize={8.5in,11in},margin=0.8in]{geometry}
+\usepackage{xcolor}
+\usepackage{color, colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{LightRed}{rgb}{1,0.49,0.49}
+
+\title{MATH 505 HW 1}
+\author{John Caruthers}
+\date\today
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+    \item [1.] Determine which of the following are statements, and classify each statement as either true or false.
+    
+    (a) President George Washington was born in Alabama. {\color{blue} Statement: False}
+    
+    (b) Good morning. {\color{red} Not Statement}
+    
+    (c) \(5 + 4 = 9\) {\color{blue} Statement: True}
+    
+    (d) \(x + 5 = 8\) {\color{red} Not Statement}
+    
+    (e) Close the door. {\color{red} Not Statement}
+    
+    (f) \(2 \cdot 3 = 7\) {\color{blue} Statement: False}
+    
+    (g) \(3x = 6\) {\color{red} Not Statement}
+    
+    (h) Help stop inflation. {\color{red} Not Statement}
+    
+    \item[2a.] If \emph{p} is T and \emph{q} is F, find the truth values of these statements.  The form $\sim$() represents the negation of everything inside the parentheses.  ($\sim$\emph{p}) $\wedge$ \emph{q}
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+             \hline
+             \emph{p} & \emph{q} & ($\sim$\emph{p}) & ($\sim$\emph{p}) $\wedge$ \emph{q} \\
+             \hline
+              T & F & F & F\\
+              \hline
+        \end{tabular}
+    \end{center}
+    
+    \item[2b.] ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q})
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & ($\sim$\emph{p}) & ($\sim$\emph{q}) &  ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q})\\
+            \hline
+            T & F & F & T & T\\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    \item[2c.] $\sim$ (\emph{p} $\vee$ \emph{q})
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & (\emph{p} $\vee$ \emph{q}) & $\sim$ (\emph{p} $\vee$ \emph{q})\\
+            \hline
+            T & F & T & F\\
+            \hline
+            
+        \end{tabular}
+    \end{center}
+    
+    \item[6.] Translate the following statements into symbolic form, using A, B, C, D, $\wedge$, $\vee$, and $\sim$, where A, B, C, and D denotes the following statements:\\
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{ll}
+             A. It is snowing. & C. The streets are not slick.\\
+             B. The roofs are white. & D. The trees are green.
+        \end{tabular}
+    \end{table}\\
+    (a) It is snowing, and the trees are green. {\color{blue} A $\wedge$ D}
+    
+    (b) The trees are green, or it is snowing. {\color{blue} D $\vee$ A}
+    
+    (c) The streets are not slick, and the roofs are not white. {\color{blue} C $\wedge$ ($\sim$B)}
+    
+    (d) The trees are not green, and it is not snowing. {\color{blue} ($\sim$D) $\wedge$ ($\sim$A)}
+    
+    \item[7.] Using the statements of Exercise 6, translate the following symbolic statements into English sentences. (If statements are grouped by parentheses, set off by commas.)
+    
+    (a) A $\wedge$ $\sim$B {\color{blue} It is snowing and the roofs are not white.}
+    
+    (b) ($\sim$B) $\vee$ ($\sim$C) {\color{blue} The roofs are not white, or the streets are slick.}
+    
+    (c) A $\wedge$ (B $\vee$ C) {\color{blue}It is snowing and, the roofs are white or the streets are not slick.}
+    
+    (d) (A $\vee \sim$C) $\wedge$ D {\color{blue} It is snowing or the streets are slick, and the trees are green.}
+    
+    (e) $\sim$ (A $\wedge \sim$D) {\color{blue} It is not the case that, it is snowing and the trees are not green.}
+    
+    (f) $\sim$ (A $\wedge \sim$C) {\color{blue} It is not the case that, it is snowing and the streets are slick.}
+    
+    \item[10.] The Higher Education Act specifies that a student is eligible to apply for a loan provided that the following is true: The student is enrolled(E) and in good standing(S), or not enrolled but accepted(A) for enrollment at an eligible institution.  
+    
+    (a) Write the statement in symbolic form. {\color{blue} (E $\wedge$ S) $\vee$ ( $\sim$E $\wedge$ A)}
+    
+    (b) Is a student who enrolled and on academic probation eligible to apply for a loan? Explain.
+    {\color{blue} No because, if the student is enrolled, they also need to be in good standing.}
+    
+    (c) Is a student who is not enrolled but has been accepted for enrollment eligible to apply for a loan? Explain.  {\color{blue} If the institution is eligible, than yes.  If a student is not enrolled, they mush be accepted for enrollment at an eligible institution.}
+    
+    \item[12.] In the game show "Truth or Despair", the contestants are presented with two doors.  Behind one door there is a new car, behind the other door a skateboard.  On each door there is a sign.  Contestants are told that exactly one of the two signs is true.   In each instance explain carefully how to determine which door leads to the car.
+    
+    (a) The sign on the first door reads. "There is a car or a skateboard behind this door." The sign on the second door reads, "There is a skateboard behind this door." 
+    \begin{center}
+        \begin{tabular}{|c|c||c|c|c|c|}
+            \hline
+            D1 $\wedge$ (C $\vee$ S) & D2 $\wedge$ S & D1 $\wedge$ C & D1 $\wedge$ S & D2 $\wedge$ C & D1 $\wedge$ S\\
+            \hline
+            \rowcolor{LightCyan}
+            T & F & F & T & T & F\\
+            \hline
+            \rowcolor{LightRed}
+            F & T & F & F & F & T\\
+            \hline
+        \end{tabular}
+    \end{center}
+    {\color{blue}Per the truth table above, the car is behind Door 2 and the skateboard is behind Door 1.  This is true because if the first door sign is False, then it means that the skateboard or car can't behind Door 1, so the sign on door one must be true to obey the constraints of the game.}
+    
+    (b) The sign on the first door reads, "Behind this door there is a skateboard and behind the other door there is a car." The sign on the second door reads, "Behind one of the doors there is a car and behind the other there is a skateboard."
+    \begin{center}
+        \begin{tabular}{|c|c||c|c|c|c|}
+            \hline
+            (D1 $\wedge$ S) $\wedge$ (D2 $\wedge$ C) & (D1 $\vee$ D2) $\wedge$ C $\wedge$ (D1 $\vee$ D2) $\wedge$ S & D1 $\wedge$ C & D1 $\wedge$ S & D2 $\wedge$ C & D1 $\wedge$ S\\
+            \hline
+            \rowcolor{LightRed}
+            T & F & F & T & T & F \\
+            \hline
+            \rowcolor{LightCyan}
+            F & T & T & F & F & T \\
+            \hline
+        \end{tabular}
+    \end{center}
+    {\color{blue} Per the truth table above, the car is behind door 1.  The sign on door 2 cannot be false because both items can't behind the same door and only a car or skateboard can be behind the doors.  Therefore, the sign on door 2 must be true, meaning the sign on door 1 must be false.  This means that the car is behind door 1 and the skateboard is behind door 2.}
+    \item[23a.] Construct truth table for: (\emph{p} $\vee$ $\sim$\emph{q}) $\wedge$ \emph{r}
+    
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{r} & (\emph{p} $\vee$ \emph{q}) & (\emph{p} $\vee$ $\sim$\emph{q}) & (\emph{p} $\vee$ $\sim$\emph{q}) $\wedge$ \emph{r}\\
+            \hline
+            T & T & T & T & T & T\\
+            \hline
+            T & T & F & T & T & F\\
+            \hline
+            T & F & T & T & T & T\\
+            \hline
+            F & T & T & T & F & F\\
+            \hline
+            T & F & F & T & T & F\\
+            \hline
+            F & F & T & F & T & T\\
+            \hline
+            F & T & F & T & F & F\\
+            \hline
+            F & F & F & F & T & F\\
+            \hline
+        \end{tabular}
+    \end{center}
+    \item[23b.] Construct truth table for: \emph{p} $\wedge$ (\emph{q} $\vee$ \emph{r})
+    \item[2.]
+    
+\end{itemize}
+\end{document}
+
+\end{document}
