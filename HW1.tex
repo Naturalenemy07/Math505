@@ -3,6 +3,7 @@
 \usepackage[papersize={8.5in,11in},margin=0.8in]{geometry}
 \usepackage{xcolor}
 \usepackage{color, colortbl}
+\usepackage{graphicx}
 \definecolor{LightCyan}{rgb}{0.88,1,1}
 \definecolor{LightRed}{rgb}{1,0.49,0.49}
 
@@ -32,7 +33,9 @@
     
     (h) Help stop inflation. {\color{red} Not Statement}
     
-    \item[2a.] If \emph{p} is T and \emph{q} is F, find the truth values of these statements.  The form $\sim$() represents the negation of everything inside the parentheses.  ($\sim$\emph{p}) $\wedge$ \emph{q}
+    \item[2] If \emph{p} is T and \emph{q} is F, find the truth values of these statements.  The form $\sim$() represents the negation of everything inside the parentheses.
+    
+    (a) ($\sim$\emph{p}) $\wedge$ \emph{q}
     \begin{center}
         \begin{tabular}{|c|c|c|c|}
              \hline
@@ -43,7 +46,7 @@
         \end{tabular}
     \end{center}
     
-    \item[2b.] ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q})
+    (b) ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q})
     \begin{center}
         \begin{tabular}{|c|c|c|c|c|}
             \hline
@@ -54,7 +57,7 @@
         \end{tabular}
     \end{center}
     
-    \item[2c.] $\sim$ (\emph{p} $\vee$ \emph{q})
+    (c) $\sim$ (\emph{p} $\vee$ \emph{q})
     \begin{center}
         \begin{tabular}{|c|c|c|c|}
             \hline
@@ -103,9 +106,9 @@
     (b) Is a student who enrolled and on academic probation eligible to apply for a loan? Explain.
     {\color{blue} No because, if the student is enrolled, they also need to be in good standing.}
     
-    (c) Is a student who is not enrolled but has been accepted for enrollment eligible to apply for a loan? Explain.  {\color{blue} If the institution is eligible, than yes.  If a student is not enrolled, they mush be accepted for enrollment at an eligible institution.}
+    (c) Is a student who is not enrolled but has been accepted for enrollment eligible to apply for a loan? Explain.  {\color{blue} If the institution is eligible, than yes they are eligible for a loan.  If a student is not enrolled, they must be accepted for enrollment at an eligible institution.}
     
-    \item[12.] In the game show "Truth or Despair", the contestants are presented with two doors.  Behind one door there is a new car, behind the other door a skateboard.  On each door there is a sign.  Contestants are told that exactly one of the two signs is true.   In each instance explain carefully how to determine which door leads to the car.
+    \item[12.] In the game show "Truth or Despair", the contestants are presented with two doors.  Behind one door there is a new car, behind the other door a skateboard.  On each door there is a sign.  Contestants are told that exactly one of the two signs is true.   In each instance explain carefully how to determine which door leads to the car.   Door 1 (D1), Door 2 (D2), Car (C), Skateboard (S)
     
     (a) The sign on the first door reads. "There is a car or a skateboard behind this door." The sign on the second door reads, "There is a skateboard behind this door." 
     \begin{center}
@@ -127,7 +130,7 @@
     \begin{center}
         \begin{tabular}{|c|c||c|c|c|c|}
             \hline
-            (D1 $\wedge$ S) $\wedge$ (D2 $\wedge$ C) & (D1 $\vee$ D2) $\wedge$ C $\wedge$ (D1 $\vee$ D2) $\wedge$ S & D1 $\wedge$ C & D1 $\wedge$ S & D2 $\wedge$ C & D1 $\wedge$ S\\
+            (D1 $\wedge$ S) $\wedge$ (D2 $\wedge$ C) & ((D1 $\vee$ D2) $\wedge$ C) $\wedge$ ((D1 $\vee$ D2) $\wedge$ S) & D1 $\wedge$ C & D1 $\wedge$ S & D2 $\wedge$ C & D1 $\wedge$ S\\
             \hline
             \rowcolor{LightRed}
             T & F & F & T & T & F \\
@@ -137,7 +140,7 @@
             \hline
         \end{tabular}
     \end{center}
-    {\color{blue} Per the truth table above, the car is behind door 1.  The sign on door 2 cannot be false because both items can't behind the same door and only a car or skateboard can be behind the doors.  Therefore, the sign on door 2 must be true, meaning the sign on door 1 must be false.  This means that the car is behind door 1 and the skateboard is behind door 2.}
+    {\color{blue} Per the truth table above, the car is behind Door 1.  The sign on Door 2 cannot be false because both items can't behind the same door and only a car or skateboard can be behind the doors.  Therefore, the sign on Door 2 must be true, meaning the sign on Door 1 must be false.  This means that the car is behind Door 1 and the skateboard is behind Door 2.}
     \item[23a.] Construct truth table for: (\emph{p} $\vee$ $\sim$\emph{q}) $\wedge$ \emph{r}
     
     \begin{center}
@@ -163,10 +166,55 @@
             \hline
         \end{tabular}
     \end{center}
+    \newpage
     \item[23b.] Construct truth table for: \emph{p} $\wedge$ (\emph{q} $\vee$ \emph{r})
-    \item[2.]
+    
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{r} & (\emph{q} $\vee$ \emph{r}) & \emph{p} $\wedge$ (\emph{q} $\vee$ \emph{r})\\
+            \hline
+            T & T & T & T & T\\
+            \hline
+            T & T & F & T & T\\
+            \hline
+            T & F & T & T & T\\
+            \hline
+            F & T & T & T & F\\
+            \hline
+            T & F & F & F & F\\
+            \hline
+            F & F & T & T & F\\
+            \hline
+            F & T & F & T & F\\
+            \hline
+            F & F & F & F & F\\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    \item[2.] Reference below image to answer questions: 
+    \begin{figure}[h]
+        \centering
+        \includegraphics{HW1p2.png}
+        \caption{Attribute pieces}
+        \label{fig:1}
+    \end{figure}
+    
+    (a) Large and Red {\color{blue} 4}
+    
+    (b) Red or Yellow {\color{blue} 16}
+    
+    (c) Green or Small {\color{blue} 20}
+    
+    (d) Square and Triangle {\color{blue} 0}
+    
+    (e) Circle or Square {\color{blue} 16}
+    
+    (f) Circle and Green, or Yellow {\color{blue} 10}
     
 \end{itemize}
 \end{document}
 
 \end{document}
+
