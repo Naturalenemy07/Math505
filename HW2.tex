@@ -1,9 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[papersize={8.5in,11in},margin=0.8in]{geometry}
-\usepackage{tabto}
 \usepackage{xcolor}
-\usepackage{color, colortbl}
 
 \title{MATH 505 HW 2}
 \author{John Caruthers}
@@ -48,6 +46,82 @@
     $\sim$(\emph{p} $\vee$ \emph{q}) is equivalent to $\sim$\emph{p} $\wedge$ $\sim$\emph{q} therefore to negate the statements, we can write: {\color{blue} Ardie can't pay me now and Ardie can't work for me later.}
     
     \item[1.] Let A represent "It is snowing"; B, "The roofs are white."; C, "The streets are slick"; and D, "The trees are covered with ice." Write the following in symbolic notation. 
+    
+    (a) If it is snowing, then the trees are covered with ice. {\color{blue} A $\to$ D}
+    
+    (b) If it is not snowing, then the roofs are not white. {\color{blue} $\sim$A $\to$ $\sim$B}
+    
+    (c) If the streets are not slick, then it is not snowing. {\color{blue} $\sim$C $\to$ $\sim$A}
+    
+    (d) If the streets are slick, then the trees are not covered with ice. {\color{blue} C $\to$ $\sim$D}
+    
+    \item[2.] In Exercise 1, assume that A is true, that B and C are both false, and that D is true.  Classify the conditional statement as either true or false.
+    
+    (a) \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            A & D & A $\to$ D \\
+            \hline
+            T & T & T\\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    (b) \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+             \hline
+             A & B & $\sim$A & $\sim$B & $\sim$A $\to$ $\sim$B\\
+             \hline
+             T & F & F & T & T \\
+             \hline
+        \end{tabular}
+    \end{center}
+    
+    (c) \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            C & A & $\sim$C & $\sim$A & $\sim$C $\to$ $\sim$A \\
+            \hline
+            F & T & T & F & F \\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    (d) \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            C & D & $\sim$D & C $\to$ $\sim$D \\
+            \hline
+            F & T & F & T \\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    \item[3.] State the \textcolor{blue}{converse}, the \textcolor{olive}{inverse}, and the \textcolor{purple}{contrapositive} of each of the following conditionals.
+    
+    (a) If a triangle is a right triangle, then one angle has a measurement of 90$^\circ$.\\
+    Converse: {\color{blue} If one angle of a triangle has a measurement of 90$^\circ$, then it is a right triangle.}\\
+    Inverse: {\color{olive} If a triangle isn't a right triangle, then one angle doesn't have a measurement of 90$^\circ$.}\\
+    Contrapositive: {\color{purple} If a triangle doesn't have one angle with a measurement of 90$^\circ$, then that triangle isn't a right triangle.}
+    
+    (b) If a number is a prime, then it is odd.\\
+    Converse: {\color{blue} If a number is odd, then it is a prime number.}\\
+    Inverse: {\color{olive} If a number isn't prime, then it isn't odd.}\\
+    Contrapositive: {\color{purple} If a number isn't odd, then it isn't a prime number.}
+    
+    (c) If two lines are parallel, then alternate interior angles are equal.\\
+    Converse: {\color{blue} If the alternate interior angles are equal, then the two lines are parallel.}\\
+    Inverse: {\color{olive} If two lines are not parallel, then the alternate interior angles are not equal.}\\
+    Contrapositive: {\color{purple} It the alternate interior angles are not equal, then the two lines are not parallel.}
+    
+    (d) If Joyce is smiling, then she is happy.\\
+    Converse: {\color{blue} If she is happy, then Joyce is smiling.}\\
+    Inverse: {\color{olive} If Joyce isn't smiling, then she isn't happy}\\
+    Contrapositive: {\color{purple} If she isn't happy, then Joyce isn't smiling.}
+    
+    \item[4.] Find the truth value of each of the following statements.
+    
+    \item[5.] Write the converse, inverse, and contrapositive of each statement in Exercise 4.
 
 \end{itemize}
 \end{document}
