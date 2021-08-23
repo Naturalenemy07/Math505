@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[papersize={8.5in,11in},margin=0.8in]{geometry}
+\usepackage{xcolor}
+\usepackage{color, colortbl}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amssymb}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{LightRed}{rgb}{1,0.49,0.49}
+
+\title{MATH 505 HW 3}
+\author{John Caruthers}
+\date\today
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+    \item[Exp. 2] Use a truth table to show that an argument is valid.
+    
+    (a) Let \emph{p} be the statement "I will buy a skateboard." Let \emph{q} be the statement "I will buy a scooter." Write the following argument in symbolic form.\\
+    \hspace*{1cm} I will buy a skateboard, or I will buy a scooter\\
+    \hspace*{1cm} I will not buy a skateboard\\
+    \begin{tikzpicture}
+    \hspace*{1cm}
+    \draw[densely dashed] (0,0)--(5,0);
+    \end{tikzpicture}\\
+    \hspace*{1cm} Therefore, I will buy a scooter.
+    
+    \hspace*{1cm} {\color{blue} \emph{p} $\vee$ \emph{q}}\\
+    \hspace*{1cm} {\color{blue} $\sim$\emph{p}}\\
+    \begin{tikzpicture}
+    \hspace*{1cm}
+    {\color{blue} \draw[densely dashed] (0,0)--(1,0);}
+    \end{tikzpicture}\\
+    \hspace*{1cm} {\color{blue} $\therefore$ \emph{p}}
+    
+    (b) Consider the symbolic pattern for the argument from (a). (An argument that follows this pattern is known classically as a \emph{disjunctive syllogism.}) Complete the truth table, which shows that the argument is valid.
+    
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{} &  &  &\\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+
+\end{itemize}
+\end{document}
+
