@@ -2,6 +2,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[papersize={8.5in,11in},margin=0.8in]{geometry}
 \usepackage{xcolor}
+\usepackage{color, colortbl}
+\usepackage{graphicx}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{LightRed}{rgb}{1,0.49,0.49}
 
 \title{MATH 505 HW 2}
 \author{John Caruthers}
@@ -34,15 +38,15 @@
     \item [Exp 2.] One of De Morgan's Laws states that for any statements \emph{p} and \emph{q}, $\sim$(\emph{p}$\vee$\emph{q}) is equivalent to ($\sim$\emph{p})$\wedge$($\sim$\emph{q}).
     
     (a) Identify statements \emph{p} and \emph{q} so that the following statement can be understood as "\emph{p} or \emph{q}.": Amelia made an A in mathematics, or Amelia made a B in English.\\
-    \emph{p}: Amelia made an A in mathematics\\
-    \emph{q}: Amelia made a B in English
+    \hspace*{1cm}\emph{p}: Amelia made an A in mathematics\\
+    \hspace*{1cm}\emph{q}: Amelia made a B in English
     
     (b) One way to write the negation of the statement in (a) is: It is not true that Amelia made an A in mathematics or Amelia made a B in English.  Write the negation another way using De Morgan's Laws.\\
     $\sim$(\emph{p} $\vee$ \emph{q}) is equivalent to $\sim$\emph{p} $\wedge$ $\sim$\emph{q} therefore we could negate the statement in (a) by {\color{blue} Amelia didn't make in A in mathematics and she didn't make a B in English.}
     
     (c) Use one of De Morgan's Laws to write the negation of this statement: Ardie can pay me now, or Ardie will work for me later.\\
-    \emph{p}: Ardie can pay me now.\\
-    \emph{q}: Ardie will work for me later.\\
+    \hspace*{1cm}\emph{p}: Ardie can pay me now.\\
+    \hspace*{1cm}\emph{q}: Ardie will work for me later.\\
     $\sim$(\emph{p} $\vee$ \emph{q}) is equivalent to $\sim$\emph{p} $\wedge$ $\sim$\emph{q} therefore to negate the statements, we can write: {\color{blue} Ardie can't pay me now and Ardie can't work for me later.}
     
     \item[1.] Let A represent "It is snowing"; B, "The roofs are white."; C, "The streets are slick"; and D, "The trees are covered with ice." Write the following in symbolic notation. 
@@ -112,7 +116,7 @@
     (c) If two lines are parallel, then alternate interior angles are equal.\\
     Converse: {\color{blue} If the alternate interior angles are equal, then the two lines are parallel.}\\
     Inverse: {\color{olive} If two lines are not parallel, then the alternate interior angles are not equal.}\\
-    Contrapositive: {\color{purple} It the alternate interior angles are not equal, then the two lines are not parallel.}
+    Contrapositive: {\color{purple} If the alternate interior angles are not equal, then the two lines are not parallel.}
     
     (d) If Joyce is smiling, then she is happy.\\
     Converse: {\color{blue} If she is happy, then Joyce is smiling.}\\
@@ -121,7 +125,179 @@
     
     \item[4.] Find the truth value of each of the following statements.
     
+    (a) If the moon orbits the earth, then $2 + 2 = 5$.\\
+    \hspace*{1cm}\emph{p}: The moon orbits the earth\\
+    \hspace*{1cm}\emph{q}: $2 + 2 = 5$\\
+        \hspace*{1cm}\begin{tabular}{|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{p} $\to$ \emph{q} \\
+            \hline
+            T & F & F\\
+            \hline
+        \end{tabular}
+    
+    \hspace*{1cm}{\color{purple} The truth value of this statement if False}
+    
+    (b) If Lincoln was the first United States president, then $2 + 2 = 5$.\\
+    \hspace*{1cm}\emph{p}: Lincoln was the first United States president\\
+    \hspace*{1cm}\emph{q}: $2 + 2 = 5$\\
+        \hspace*{1cm}\begin{tabular}{|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{p} $\to$ \emph{q} \\
+            \hline
+            F & F & T\\
+            \hline
+        \end{tabular}
+    
+    \hspace*{1cm}{\color{blue} The truth value of this statement if True}
+    
+    (c) If Mexico is the southern neighbor of the United States, then $3 + 3 = 6$.\\
+    \hspace*{1cm}\emph{p}: Mexico is the southern neighbor of the United States\\
+    \hspace*{1cm}\emph{q}: $3 + 3 = 6$\\
+        \hspace*{1cm}\begin{tabular}{|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{p} $\to$ \emph{q} \\
+            \hline
+            T & T & T\\
+            \hline
+        \end{tabular}
+    
+    \hspace*{1cm}{\color{blue} The truth value of this statement if True}
+    \newpage
+    
+    (d) If Canada is in Asia, then $3 + 3 = 6$.\\
+    \hspace*{1cm}\emph{p}: Canada is in Asia\\
+    \hspace*{1cm}\emph{q}: $3 + 3 = 6$\\
+        \hspace*{1cm}\begin{tabular}{|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{p} $\to$ \emph{q} \\
+            \hline
+            F & T & T\\
+            \hline
+        \end{tabular}
+    
+    \hspace*{1cm}{\color{blue} The truth value of this statement if True}
+    
     \item[5.] Write the converse, inverse, and contrapositive of each statement in Exercise 4.
+    
+    (a) If the moon orbits the earth, then $2 + 2 = 5$.\\
+    Converse: {\color{blue} If $2 + 2 = 5$, then the moon orbits the earth.}\\
+    Inverse: {\color{olive} If the moon doesn't orbit the earth, then $2 + 2 \neq 5$.}\\
+    Contrapositive: {\color{purple} If $2 + 2 \neq 5$, then the moon doesn't orbit the earth.}
+    
+    (b) If Lincoln was the first United States president, then $2 + 2 = 5$.\\
+    Converse: {\color{blue} If $2 + 2 = 5$, the Lincoln was the first United States president.}\\
+    Inverse: {\color{olive} If Lincoln wasn't the first United states president, then $2 + 2 \neq 5$.}\\
+    Contrapositive: {\color{purple} If $2 + 2 \neq 5$, the Lincoln wasn't the first United States president.}
+    
+    (c) If Mexico is the southern neighbor of the United States, then $3 + 3 = 6$.\\
+    Converse: {\color{blue} If $3 + 3 = 6$, then Mexico is the southern neighbor of the United States.}\\
+    Inverse: {\color{olive} If Mexico isn't the southern neighbor of the United States, then $3 + 3 \neq 6$.}\\
+    Contrapositive: {\color{purple} If $3 + 3 \neq 6$, then Mexico isn't the southern neighbor of the United States.}
+    
+    (d) If Canada is in Asia, then $3 + 3 = 6$.\\
+    Converse: {\color{blue} If $3 + 3 = 6$, the Canada is in Asia.}\\
+    Inverse: {\color{olive} If Canada isn't in Asia, then $3 + 3 \neq 6$.}\\
+    Contrapositive: {\color{purple} If $3 + 3 \neq 6$, then Canada isn't in Asia.}
+    
+    \item[6.] Using the notation of Exercise 1, translate the following into sentences:
+    
+    (a) $\sim$A $\to$ B {\color{blue} If it isn't snowing, then the roofs are white.}
+    
+    (b) $\sim$C $\to$ $\sim$B {\color{blue} If the streets are not slick, then the roofs are not white.}
+    
+    (c) ($\sim$B $\wedge$ $\sim$C) $\to$ A {\color{blue} If the roofs are not white and the streets are not slick, then it is snowing.}
+    
+    (d) (A $\vee$ B) $\to$ $\sim$C {\color{blue} If it is snowing or the roofs are white, then the streets are not slick.}
+    
+    (e) $\sim$(A $\to$ $\sim$B) is equivalent to A $\wedge$ B {\color{blue} It is snowing and the roofs are white.}
+    
+    (f)  ($\sim$C $\vee$ $\sim$A) $\to$ $\sim$B is equivalent to $\sim$(C $\wedge$ A) $\to$ $\sim$B {\color{blue} If the streets are not slick and it isn't snowing, then the roofs are not white.}
+    
+    \item[7.] In the game show "Truth of Despair", the contestants are presented with two doors.  Behind one door there is a new car; behind the other door there is a skateboard.  On each door there is a sign.  Contestants are told that exactly one of the two signs is true.  Explain carefully how to determine which door leads to the new car from these signs: 
+    
+    The sign on the first door reads, \emph{"If there is a car behind this door, then there is a skateboard behind the other door."} and the sign on the second door reads \emph{"There is a car behind this door"}.
+    
+    {\color{blue} Using symbolic notation, the sign on Door 1 reads: D1 $\wedge$ C $\to$ D2 $\wedge$ S. Following the constraints of the game, both statements on Door 1 need to be either all true or false; shown in the light cyan rows below.  This means that the conditional on Door 1 can only be true, otherwise it would break the constraints of the game.}
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            D1 $\wedge$ C & D2 $\wedge$ S & D1 $\wedge$ C $\to$ D2 $\wedge$ S \\
+            \hline
+            \rowcolor{LightCyan}
+            T & T & T\\
+            \hline
+            \rowcolor{LightRed}
+            T & F & F\\
+            \hline
+            \rowcolor{LightRed}
+            F & T & T\\
+            \hline
+            \rowcolor{LightCyan}
+            F & F & T\\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    {\color{blue} Using symbolic notation, the sign on Door 2 reads: D2 $\wedge$ C. Since the sign on Door 1 must be true, the sign on Door 2 must be false.  This means that Door 1 has the car and Door 2 has the skateboard.}
+    
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            D1 $\wedge$ C $\to$ D2 $\wedge$ S & D2 $\wedge$ C & D1 $\wedge$ C & D1 $\wedge$ S & D2 $\wedge$ C & D2 $\wedge$ S\\
+            \hline
+            T & F & T & F & F & T\\
+            \hline
+        \end{tabular}
+    \end{center}
 
+    \item[9.] Commercials and advertisements are often based on the assumption that naive audiences will accept the converse, inverse, contrapositive , and original statements are all true.  Write the converse, inverse, and contrapositive of the following statements.  Think about whether they have the same truth values.
+    
+    (a) If you brush your teeth with White-as-Snow, then you have fewer cavities.\\
+    Converse: {\color{blue} If you have fewer cavities, then you brush your teeth with White-as-Snow.}\\
+    Inverse: {\color{olive} If you don't brush your teeth with White-as-Snow, then you will won't have fewer cavities.}\\
+    Contrapositive: {\color{purple} If you don't have fewer cavities, then you don't brush your teeth with White-as-Snow.}
+    
+    (b) If you like this book, then you love mathematics.\\
+    Converse: {\color{blue} If you love mathematics, then you like this book.}\\
+    Inverse: {\color{olive} If you don't like this book, then you don't love mathematics.}\\
+    Contrapositive: {\color{purple} If you don't love mathematics, then you don't like this book.}
+    
+    (c) If you are strong, then you eat Barlies for breakfast.\\
+    Converse: {\color{blue} If you eat Barlies for breakfast, then you are strong.}\\
+    Inverse: {\color{olive} If you are not strong, then you don't eat Barlies for breakfast.}\\
+    Contrapositive: {\color{purple} If you don't eat Barlies for breakfast, the you are not strong.}
+    
+    (d) If you use Wave, then your clothes are bright and colorful.\\
+    Converse: {\color{blue} If your clothes are bright and colorful, then you use Wave.}\\
+    Inverse: {\color{olive} if you don't use Wave, then your clothes are not bright and colorful.}\\
+    Contrapositive: {\color{purple} If you clothes are not bright and colorful, then you don't use wave.}
+    
+    \item[10.] From an insurance policy: If the recomputed premium exceeds the premium stated on the declaration page, then you must pay the excess to Guarantee Auto.
+    
+    (a) Suppose the recomputed premium is \$800 while the premium on the declaration page is \$600.  What must the person do?\\
+    {\color{blue} The person must pay the excess (\$200) to Guarantee Auto.}
+    
+    (b) Suppose the recomputed premium is \$550 while the premium on the declaration page is \$600.  What does the policy statement indicate that the insured person must do?\\
+    {\color{blue} Since the recomputed amount doesn't exceed the premium on the declaration page, then the person doesn't need to do anything.}
+    
+    \item[11.] From IRS instructions: if your return is more than 60 days late, the minimum penalty will be \$100 or the amount of any tax you owe, whichever is smaller.
+    
+    (a) Suppose the return is 65 days late and you owe \$75 in taxes.  What is the minimum penalty?\\
+    {\color{blue} \$75}
+    
+    (b) Suppose the return is 59 days late.  What does the policy say about the penalty?\\
+    {\color{blue} Since the return isn't more than 60 days late, the is no penalty.}
+    
+    \item[12.] Write the following in "if-then" form:
+    
+    (a) Carelessness leads to accidents. {\color{blue} If you are careless, then it will lead to accidents.}
+    
+    (b) Whenever I see June, my heart throbs. {\color{blue} If I see June, then my heart throbs.}
+    
+    (c) A triangle is isosceles if two sides are congruent. {\color{blue} If a triangle is isosceles, then two sides are congruent.}
+    
+    (d) I will be happy if I pass. {\color{blue} If I pass, then I will be happy.}
+    
 \end{itemize}
 \end{document}
