@@ -41,11 +41,26 @@
     \begin{center}
         \begin{tabular}{|c|c|c|c|c|c|}
             \hline
-            \emph{p} & \emph{q} & \emph{} &  &  &\\
+            \emph{p} & \emph{q} & $\sim$\emph{p} & \emph{p} $\vee$ \emph{q} & (\emph{p} $\vee$ \emph{q}) $\wedge$ $\sim$\emph{q} & \emph{q}\\
+            \hline
+            T & T & F & T & F & T\\
+            \hline
+            T & F & F & T & T & F \\
+            \hline
+            F & T & T & T & F & T \\
+            \hline
+            F & F & T & F & F & F \\
             \hline
         \end{tabular}
     \end{center}
     
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & $\sim$\emph{p} & \emph{p} $\to$ \emph{q} & (\emph{p} $\to$ \emph{q}) $\wedge$ $\sim$\emph{q} & $\sim$\emph{q}\\
+            \hline
+        \end{tabular}
+    \end{center}
 
 \end{itemize}
 \end{document}
