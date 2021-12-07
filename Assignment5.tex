@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[papersize={8.5in,11in},margin=0.8in]{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{MATH 505 Assignment 5}
+\author{John Caruthers}
+\date\today
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+    \item[] \textbf{Theorem 1:} If $x$ and $y$ are even integers, then $x+y$ is even.
+    
+    \hspace*{0.5cm}Def: An even integer is equal to $2k$ where $k\in\mathbb{Z}$.
+    
+    \hspace*{0.5cm}Plan: Show that $x+y=2k$ where $k$ is any arbitrary integer. Prove directly:
+    \begin{align}
+        x&=2j\nonumber\\
+        y&=2m\nonumber
+    \end{align}
+    \hspace*{0.5cm}Input these into the equation $x+y=2k$.
+    \begin{align}
+        2j+2m&=2k\nonumber\\
+        2(j+m)&=2k\nonumber
+    \end{align}
+    \hspace*{0.5cm}By the Axiom of Integers, if $a,b\in\mathbb{Z}$,then $a+b\in\mathbb{Z}\therefore(j+m)\in\mathbb{Z}$, represent with $p$.
+    \begin{align}
+        2p=2k\nonumber
+    \end{align}
+    \hspace*{0.5cm}Since both $p$ and $k$ are both integers, and $2k$ and $2p$ are both even integers, we can make our conclusion:
+    
+    \hspace*{0.5cm}$x+y=z$ with $x,y,z\in\mathbb{Z}$ and $x,y,z$ are all even. $\Box$
+    
+    \item[] \textbf{Theorem 2:} If $x$ is an odd integer and $y$ is an even integer, then $x\cdot y$ is an even integer.
+    
+    \hspace*{0.5cm}Def: An even integer is equal to $2k$, and an odd integer is equal to $2k+1$ where $k\in\mathbb{Z}$.
+    
+    \hspace*{0.5cm}Plan: Show that $x\cdot y=2p$ where $x$ is an odd integer, $y$ is an even integer, and $m$ is any arbitrary integer. \hspace*{1.4cm}Prove directly:
+    \begin{align}
+        x&=2j+1\nonumber\\
+        y&=2m\nonumber
+    \end{align}
+    
+    \hspace*{0.5cm}Input these into the equation $x\cdot y=2k$
+    \begin{align}
+        (2j+1)\cdot(2m)&=2p\nonumber\\
+        4jm+2m&=2p\nonumber\\
+        2(2jm+m)&=2p\nonumber
+    \end{align}
+    
+    \hspace*{0.5cm}Per the Axiom of Integers, $2jm+m$ is an integer, which can be represented by $q$.
+    \begin{align}
+        2q=2p\nonumber
+    \end{align}
+    
+    \noindent
+    \hspace*{0.5cm}Since $2q$ and $2p$ are both even integers, we can make our conclusion: The product of an even integer and \hspace*{0.5cm}an odd integer is an even integer. $\Box$
+\end{itemize}
+
+\end{document}
