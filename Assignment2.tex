@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[papersize={8.5in,11in},margin=0.8in]{geometry}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{color, colortbl}
+\usepackage{graphicx}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+\title{MATH 505 Assignment 2}
+\author{John Caruthers}
+\date\today
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+    \item[1.] Decide whether the arguments are valid. Explain.
+    
+    (a) All math is fun.\\
+    \hspace*{0.6cm}Logic is math.\\
+    \begin{tikzpicture}
+    \hspace*{0.6cm}
+    \draw[densely dashed] (0,0)--(2.5,0);
+    \end{tikzpicture}\\
+    \hspace*{0.6cm}Logic is fun.
+    
+    \hspace*{0.6cm}{\color{blue} This is valid by rule of detachment.}
+    
+    (b) If I exercise, then I will be tired.\\
+    \hspace*{0.6cm}I do not exercise.\\
+    \begin{tikzpicture}
+    \hspace*{0.6cm}
+    \draw[densely dashed] (0,0)--(2.5,0);
+    \end{tikzpicture}\\
+    \hspace*{0.6cm}Therefore, I am not tired.
+    
+    \hspace*{0.6cm}{\color{blue} This argument is invalid by falsity of inverse.}
+    
+    (c) All natural numbers are integers.\\
+    \hspace*{0.55cm}All integers are rational numbers.\\
+    \hspace*{0.6cm}$\pi$ is not a rational number.\\
+    \begin{tikzpicture}
+    \hspace*{0.6cm}
+    \draw[densely dashed] (0,0)--(2.5,0);
+    \end{tikzpicture}\\
+    \hspace*{0.6cm}$\pi$ is not an integer.
+    
+    \hspace*{0.6cm}{\color{blue} This is valid by rule of contrapositive}
+    
+    (d) All multiples of 2 are even.\\
+    \hspace*{0.6cm}18 is a multiple of 3\\
+    \begin{tikzpicture}
+    \hspace*{0.6cm}
+    \draw[densely dashed] (0,0)--(2.5,0);
+    \end{tikzpicture}\\
+    \hspace*{0.6cm}18 is even.
+    
+    \hspace*{0.6cm}{\color{blue} It is valid because the conclusion is true when the conjunction of the premises are true .}
+    
+    \item[2.] In the book, the \textbf{Rule of Detachment} and the \textbf{Chain Rule} have accompanying truth tables.  In these truth tables, they mark the rows which justify these two rules.  Do the same for \textbf{Rule of Contrapositive}.
+    
+    The rule of contrapositive states:\\
+    \hspace*{0.6cm}$p \to q$\\
+    \hspace*{0.6cm}$\sim q$\\
+    \begin{tikzpicture}
+    \hspace*{0.6cm}
+    \draw[densely dashed] (0,0)--(2.5,0);
+    \end{tikzpicture}\\
+    \hspace*{0.6cm}$\therefore$ $ \sim p$
+    
+    \begin{centering}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            $p$ & $q$ & $\sim q$ & $p \to q$ & $p \to q$ $\wedge$ $\sim q$ & $\sim p$\\
+            \hline
+            T & T & F & T & F & F\\
+            \hline
+            T & F & T & F & F & F\\
+            \hline
+            F & T & F & T & F & T\\
+            \hline
+            \rowcolor{LightCyan}
+            F & F & T & T & T & T\\
+            \hline
+        \end{tabular}
+    \end{centering}
+    
+    {\color{blue} The Rule of Contrapositive is valid because in all instances where the conjunction of the premises is true, the conclusion is also true.}
+\end{itemize}
+
+\end{document}
