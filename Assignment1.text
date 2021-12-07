@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[papersize={8.5in,11in},margin=0.8in]{geometry}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+
+\title{MATH 505 Assignment 1}
+\author{John Caruthers}
+\date\today
+
+\begin{document}
+\maketitle
+
+Complete truth tables for the following statements:
+\begin{itemize}
+    \item[1.] $\sim$($\sim$\emph{p})
+    
+    \begin{centering}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \emph{p} & $\sim$\emph{p} & $\sim$($\sim$\emph{p})\\
+            \hline
+            T & F & T\\
+            \hline
+            F & T & F\\
+            \hline
+        \end{tabular}
+    \end{centering}
+    
+    \item[2.] \emph{p} $\leftrightarrow$ $\sim$($\sim$\emph{p})
+    
+    \begin{centering}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            \emph{p} & $\sim$\emph{p} & $\sim$($\sim$\emph{p}) & \emph{p} $\to$ $\sim$($\sim$\emph{p}) & $\sim$($\sim$\emph{p}) $\to$ \emph{p} & \emph{p} $\leftrightarrow$ $\sim$($\sim$\emph{p})\\
+            \hline
+            T & F & T & T & T & T\\
+            \hline
+            F & T & F & T & T & T\\
+            \hline
+        \end{tabular}
+    \end{centering}
+    
+    \item[3.] (\emph{p} $\wedge$ \emph{q}) $\to$ (\emph{q} $\vee$ \emph{p})
+    
+    \begin{centering}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{p} $\wedge$ \emph{q} & \emph{q} $\vee$ \emph{p} & (\emph{p} $\wedge$ \emph{q}) $\to$ (\emph{q} $\vee$ \emph{p})\\
+            \hline
+            T & T & T & T & T\\
+            \hline
+            T & F & F & T & T\\
+            \hline
+            F & T & F & T & T\\
+            \hline
+            F & F & F & F & T\\
+            \hline
+        \end{tabular}
+    \end{centering}
+    
+    \item[4.] (\emph{p} $\to$ \emph{q}) $\leftrightarrow$ (\emph{q} $\to$ \emph{p})
+    
+    \begin{centering}
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{p} $\to$ \emph{q} & \emph{q} $\to$ \emph{p} & (\emph{p} $\to$ \emph{q}) $\to$ (\emph{q} $\to$ \emph{p}) & (\emph{q} $\to$ \emph{p}) $\to$ (\emph{p} $\to$ \emph{q}) & (\emph{p} $\to$ \emph{q}) $\leftrightarrow$ (\emph{q} $\to$ \emph{p}) \\
+            \hline
+            T & T & T & T & T & T & T\\
+            \hline
+            T & F & F & T & T & F & F\\
+            \hline
+            F & T & T & F & F & T & F\\
+            \hline
+            F & F & T & T & T & T & T\\
+            \hline
+        \end{tabular}
+    \end{centering}
+    
+    \item[5.] De Morgan's Law: $\sim$(\emph{p} $\wedge$ \emph{q}) $\leftrightarrow$ ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q})
+    
+    \begin{centering}
+        \begin{adjustbox}{width=1\textwidth}
+            \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+                \hline
+                \emph{p} & \emph{q} & $\sim$\emph{p} & $\sim$\emph{q} & (\emph{p} $\wedge$ \emph{q}) & $\sim$(\emph{p} $\wedge$ \emph{q}) & ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q}) & $\sim$(\emph{p} $\wedge$ \emph{q}) $\to$ ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q}) & ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q}) $\to$ $\sim$(\emph{p} $\wedge$ \emph{q}) & $\sim$(\emph{p} $\wedge$ \emph{q}) $\leftrightarrow$ ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q})\\
+                \hline
+                T & T & F & F & T & F & F & T & T & T\\
+                \hline
+                T & F & F & T & F & T & T & T & T & T\\
+                \hline
+                F & T & T & F & F & T & T & T & T & T\\
+                \hline
+                F & F & T & T & F & T & T & T & T & T\\
+                \hline
+            \end{tabular}
+        \end{adjustbox}
+    \end{centering}
+    
+    \item[] Which of the above statements were tautologies?
+    
+    {\color{blue} Yes, a tautology is a compound statement that is true for all possible values that compose it.  \emph{p} $\leftrightarrow$ $\sim$($\sim$\emph{p}), (\emph{p} $\wedge$ \emph{q}) $\to$ (\emph{q} $\vee$ \emph{p}), and De Morgan's Law: $\sim$(\emph{p} $\wedge$ \emph{q}) $\leftrightarrow$ ($\sim$\emph{p}) $\vee$ ($\sim$\emph{q}) all met this qualification.}
+    
+\end{itemize}
+\end{document}
