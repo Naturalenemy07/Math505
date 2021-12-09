@@ -19,7 +19,8 @@
 \begin{itemize}
     \item[Exp. 2] Use a truth table to show that an argument is valid.
     
-    (a) Let \emph{p} be the statement "I will buy a skateboard." Let \emph{q} be the statement "I will buy a scooter." Write the following argument in symbolic form.\\
+    (a) Let \emph{p} be the statement "I will buy a skateboard." Let \emph{q} be the statement "I will buy a scooter." Write the following argument in symbolic form.
+    
     \hspace*{1cm} I will buy a skateboard, or I will buy a scooter\\
     \hspace*{1cm} I will not buy a skateboard\\
     \begin{tikzpicture}
@@ -32,36 +33,293 @@
     \hspace*{1cm} {\color{blue} $\sim$\emph{p}}\\
     \begin{tikzpicture}
     \hspace*{1cm}
-    {\color{blue} \draw[densely dashed] (0,0)--(1,0);}
+    {\color{blue} \draw[densely dashed] (0,0)--(1.2,0);}
     \end{tikzpicture}\\
-    \hspace*{1cm} {\color{blue} $\therefore$ \emph{p}}
+    \hspace*{1cm} {\color{blue} $\therefore$ \emph{q}}
     
-    (b) Consider the symbolic pattern for the argument from (a). (An argument that follows this pattern is known classically as a \emph{disjunctive syllogism.}) Complete the truth table, which shows that the argument is valid.
+    (b) Consider the symbolic pattern for the argument from (a). (An argument that follows this pattern is known classically as a \emph{disjunctive syllogism.}) Complete the truth table, which shows that the argument is valid. Explain why the truth table shows the argument is valid.
     
     \begin{center}
         \begin{tabular}{|c|c|c|c|c|c|}
             \hline
-            \emph{p} & \emph{q} & $\sim$\emph{p} & \emph{p} $\vee$ \emph{q} & (\emph{p} $\vee$ \emph{q}) $\wedge$ $\sim$\emph{q} & \emph{q}\\
+            \emph{p} & \emph{q} & $\sim$\emph{p} & \emph{p} $\vee$ \emph{q} & (\emph{p} $\vee$ \emph{q}) $\wedge$ $\sim$\emph{p} & \emph{q}\\
             \hline
             T & T & F & T & F & T\\
             \hline
-            T & F & F & T & T & F \\
+            T & F & F & T & F & F \\
             \hline
-            F & T & T & T & F & T \\
+            \rowcolor{LightCyan}
+            F & T & T & T & T & T \\
             \hline
             F & F & T & F & F & F \\
             \hline
         \end{tabular}
     \end{center}
     
+    {\color{blue} This argument is valid because the conjunction of the premises is true only if all the individual premises are also true, and the conclusion is true only in this case.  When the conjunction of the premises is false, it is impossible for the conclusion to be true.}
+    
+    (c) Consider the following argument:
+    
+    \hspace*{1cm} {\color{blue} \emph{p} $\to$ \emph{q}}\\
+    \hspace*{1cm} {\color{blue} $\sim$\emph{p}}\\
+    \begin{tikzpicture}
+    \hspace*{1cm} {\color{blue} \draw[densely dashed] (0,0)--(1.2,0);}
+    \end{tikzpicture}\\
+    \hspace*{1cm} {\color{blue} $\therefore$ $\sim$\emph{q}}
+    
     \begin{center}
         \begin{tabular}{|c|c|c|c|c|c|}
             \hline
-            \emph{p} & \emph{q} & $\sim$\emph{p} & \emph{p} $\to$ \emph{q} & (\emph{p} $\to$ \emph{q}) $\wedge$ $\sim$\emph{q} & $\sim$\emph{q}\\
+            \emph{p} & \emph{q} & $\sim$\emph{p} & \emph{p} $\to$ \emph{q} & (\emph{p} $\to$ \emph{q}) $\wedge$ $\sim$\emph{p} & $\sim$\emph{q}\\
+            \hline
+            T & T & F & T & F & F\\
+            \hline
+            T & F & F & F & F & T\\
+            \hline
+            \rowcolor{LightRed}
+            F & T & T & T & T & F\\
+            \hline
+            \rowcolor{LightCyan}
+            F & F & T & T & T & T\\
             \hline
         \end{tabular}
     \end{center}
-
+    
+    {\color{blue} This argument is invalid because there exists a condition where the conjunction of the premises is true and the conclusion is false (red row). }
+    \newpage
+    
+    (d) Use the work in (c) to help evaluate the validity of the following argument: 
+    
+    \hspace*{1cm} If it snows, then I get cold.\\
+    \hspace*{1cm} It does not snow.\\
+    \begin{tikzpicture}
+    \hspace*{1cm}
+    \draw[densely dashed] (0,0)--(5,0);
+    \end{tikzpicture}\\
+    \hspace*{1cm} Therefore, I do not get cold.
+    
+    \emph{p}: It snows. \emph{q}: I get cold.  Below is the argument in symbolic pattern:
+    
+    \hspace*{1cm} {\color{blue} \emph{p} $\to$ \emph{q}}\\
+    \hspace*{1cm} {\color{blue} $\sim$\emph{p}}\\
+    \begin{tikzpicture}
+    \hspace*{1cm} {\color{blue} \draw[densely dashed] (0,0)--(1.2,0);}
+    \end{tikzpicture}\\
+    \hspace*{1cm} {\color{blue} $\therefore$ $\sim$\emph{q}}
+    
+    {\color{blue} This is the same argument symbolically as (c) above.  Looking at the truth table above, it is determined that the argument is invalid because there exists conditions when the conjunction of the premises is true and conclusion is false. Using the premises, it is possible for me to be cold, even if it isn't snowing.}
+    
+    \item[1.] If you eat your squash (\emph{s}), then you may go out and play (\emph{p}).\\
+    You eat your squash.\\
+    \begin{tikzpicture}
+    \draw[densely dashed] (0,0)--(5,0);
+    \end{tikzpicture}\\
+    Therefore, you may go out and play.
+    
+    \hspace*{1cm} {\color{blue} \emph{s} $\to$ \emph{p}}\\
+    \hspace*{1cm} {\color{blue} \emph{s}}\\
+    \begin{tikzpicture}
+    \hspace*{1cm} {\color{blue} \draw[densely dashed] (0,0)--(1.2,0);}
+    \end{tikzpicture}\\
+    \hspace*{1cm} {\color{blue} $\therefore$ \emph{p}}
+    
+    
+    \item[2.] If you studied Latin(\emph{L}), then Spanish is easy (\emph{S}).\\
+    Spanish is not easy.\\
+    \begin{tikzpicture}
+    \draw[densely dashed] (0,0)--(5,0);
+    \end{tikzpicture}\\
+    Therefore, you did not study Latin
+    
+    \hspace*{1cm} {\color{blue} \emph{L} $\to$ \emph{S}}\\
+    \hspace*{1cm} {\color{blue} $\sim$\emph{S}}\\
+    \begin{tikzpicture}
+    \hspace*{1cm} {\color{blue} \draw[densely dashed] (0,0)--(1.2,0);}
+    \end{tikzpicture}\\
+    \hspace*{1cm} {\color{blue} $\therefore$ $\sim$\emph{L}}
+    
+    \item[3.] If prices increase (\emph{p}), then consumers will complain (\emph{c}).\\
+    If consumers complain, then managers will fret (\emph{m}).\\
+    \begin{tikzpicture}
+    \draw[densely dashed] (0,0)--(5,0);
+    \end{tikzpicture}\\
+    Therefore, if prices increase, then managers will fret.
+    
+    \hspace*{1cm} {\color{blue} \emph{p} $\to$ \emph{c}}\\
+    \hspace*{1cm} {\color{blue} \emph{c} $\to$ \emph{m}}\\
+    \begin{tikzpicture}
+    \hspace*{1cm} {\color{blue} \draw[densely dashed] (0,0)--(1.2,0);}
+    \end{tikzpicture}\\
+    \hspace*{1cm} {\color{blue} $\therefore$ \emph{p} $\to$ \emph{m}}
+    
+    \item[4.] For Exercises 1 - 3, identify which of the rules of logic ensures that the argument is valid. Use (a-c) for respective Exercise 1-3.
+    
+    (a) {\color{blue} rule of detachment}
+    
+    (b) {\color{blue} rule of contraposition}
+    
+    (c) {\color{blue} chain rule}
+    
+    \item[5.] Identify the rule or rules of logic used to find the valid conclusion in each of the following:
+    
+    (a) \emph{p} $\to$ $\sim$\emph{q}\\
+    \hspace*{0.4cm} \emph{q}\\
+    \begin{tikzpicture}
+    \hspace*{0.4cm} \draw[densely dashed] (0,0)--(1.2,0);
+    \end{tikzpicture}\\
+    \hspace*{0.4cm} $\therefore$ $\sim$\emph{p}
+    
+    {\hspace*{0.4cm}\color{blue} rule of contraposition}
+    
+    (b) \emph{a} $\to$ \emph{b}\\
+    \hspace*{0.5cm} \emph{b} $\to$ \emph{c}\\
+    \begin{tikzpicture}
+    \hspace*{0.5cm} \draw[densely dashed] (0,0)--(1.4,0);
+    \end{tikzpicture}\\
+    \hspace*{0.4cm} $\therefore$ \emph{a} $\to$ \emph{c}
+    
+    {\hspace*{0.4cm}\color{blue} chain rule}
+    
+    (c) If two sides of a triangle are congruent, then the angles opposite these sides are congruent.\\ 
+    \hspace*{0.4cm} Sides BC is congruent to side AB in triangle ABC.\\
+    \begin{tikzpicture}
+    \hspace*{0.5cm} \draw[densely dashed] (0,0)--(8,0);
+    \end{tikzpicture}\\
+    \hspace*{0.4cm}Therefore, the angles opposite BC and AB are congruent.
+    
+    {\hspace*{0.4cm} \color{blue} rule of detachment}
+    
+    (d) If the movie is not over, then they will buy popcorn.\\
+    \hspace*{0.4cm} They do not buy popcorn.\\
+    \begin{tikzpicture}
+    \hspace*{0.5cm} \draw[densely dashed] (0,0)--(8,0);
+    \end{tikzpicture}\\
+    \hspace*{0.4cm} Therefore, the movie is over.
+    
+    {\hspace*{0.4cm} \color{blue} rule of contraposition}
+    
+    (e) If Kahleel wins, he is happy.\\
+    \hspace*{0.4cm} If Kahleel is happy, he treats his sister well.\\
+    \begin{tikzpicture}
+    \hspace*{0.5cm} \draw[densely dashed] (0,0)--(8,0);
+    \end{tikzpicture}\\
+    \hspace*{0.4cm} Therefore, if Kahleel wins, he treats his sister will.
+    
+    {\hspace*{0.4cm} \color{blue} chain rule}
+    
+    \item[7.] Draw a valid conclusion from each of the following sets of statements.   Explain why your conclusion is valid.
+    
+    (a) If Susan is a freshman, then Susan takes mathematics.  Susan is a freshman.\\
+    {\hspace*{0.4cm} \color{blue} Therefore, Susan takes mathematics. Valid by the rule of detachment}
+    
+    (b) You will fail this test if you do not study.  You do not fail the test.\\
+    {\hspace*{0.4cm} \color{blue} Therefore, you studied. Valid by rule of contraposition.}
+    
+    (c) You cry if you are sad.  You are sad.\\
+    {\hspace*{0.4cm} \color{blue} Therefore, you cry. Valid by rule of detachment.}
+    
+    (d) You will receive your allowance if you cut the grass.  You do not receive your allowance.\\
+    {\hspace*{0.4cm} \color{blue} Therefore, you didn't cut the grass. Valid by rule of contraposition.}
+    
+    \item[12.] Determine whether the argument is valid by using truth tables.  Check whether the conclusion is true for each case in which the conjunction of the premises is true.  
+    
+    \emph{p} $\to$ $\sim$\emph{q}\\
+    \emph{q} $\vee$ \emph{r}\\
+    \emph{p}\\
+    \begin{tikzpicture}
+    \draw[densely dashed] (0,0)--(1.5,0);
+    \end{tikzpicture}\\
+    $\therefore$ \emph{r}
+    
+    \begin{centering}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \emph{p} & \emph{q} & \emph{r} & $\sim$\emph{q} & \emph{p} $\to$ $\sim$\emph{q} & \emph{q} $\vee$ \emph{r} & (\emph{p} $\to$ $\sim$\emph{q}) $\wedge$ (\emph{q} $\vee$ \emph{r}) & (\emph{p} $\to$ $\sim$\emph{q}) $\wedge$ (\emph{q} $\vee$ \emph{r}) $\wedge$ \emph{p} & \emph{r}\\
+            \hline
+            T & T & T & F & F & T & F & F & T\\
+            \hline
+            T & T & F & F & F & T & F & F & F\\
+            \hline
+            \rowcolor{LightCyan}
+            T & F & T & T & T & T & T & T & T\\
+            \hline
+            T & F & F & T & T & F & F & F & F\\
+            \hline
+            F & T & T & F & T & T & T & F & T\\
+            \hline
+            F & T & F & F & T & T & T & F & F\\
+            \hline
+            F & F & T & T & T & T & T & F & T\\
+            \hline
+            F & F & F & T & T & F & F & F & F\\
+            \hline
+        \end{tabular}
+    \end{centering}
+    
+    {\color{blue} The argument is valid because the conclusion is true in every circumstance where the conjunction of the premises is true.  This only occurs once as shown above(light blue row). }
+    \newpage
+    
+    \item[22.] Write the argument in symbolic form.  Then determine whether any of the three rules of logic from this section can be used to determine that the arguments are valid.  If not, check validity with truth tables.
+    
+    If \emph{q}, then not \emph{p}.\\
+    \emph{q} and \emph{r} are true.\\
+    \begin{tikzpicture}
+    \draw[densely dashed] (0,0)--(4.7,0);
+    \end{tikzpicture}\\
+    Therefore, if not \emph{p}, then not \emph{r}.
+    
+    \emph{q} $\to$ $\sim$\emph{p}\\
+    \emph{q} $\wedge$ \emph{r}\\
+    \begin{tikzpicture}
+    \draw[densely dashed] (0,0)--(4.7,0);
+    \end{tikzpicture}\\
+    $\therefore$ $\sim$\emph{p} $\to$ $\sim$\emph{r}.
+    
+    {\color{blue} Rule of detachment, chain rule, or rule of contrapositive isn't clearly applied to this argument.  The truth table below shows that the argument isn't valid because in the only instance where the conjunction of the premises are true, the conclusion in false.}
+    
+    \begin{centering}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \emph{q} & \emph{p} & \emph{r} & $\sim$\emph{p} & $\sim$\emph{r} & \emph{q} $\to$ $\sim$\emph{p} & \emph{q} $\wedge$ \emph{r} & (\emph{q} $\to$ $\sim$\emph{p}) $\wedge$ (\emph{q} $\wedge$ \emph{r}) & $\sim$\emph{p} $\to$ $\sim$\emph{r} \\
+            \hline
+            T & T & T & F & F & F & T & F & T \\
+            \hline
+            T & T & F & F & T & F & F & F & T \\
+            \hline
+            \rowcolor{LightRed}
+            T & F & T & T & F & T & T & T & F \\
+            \hline
+            T & F & F & T & T & T & F & F & T \\
+             \hline
+            F & T & T & F & F & T & F & F & T\\
+            \hline
+            F & T & F & F & T & T & F & F & T\\
+            \hline
+            F & F & T & T & F & T & F & F & F\\
+            \hline
+            F & F & F & T & T & T & F & F & T\\
+             \hline
+        \end{tabular}
+    \end{centering}
+    
+    \item[24.] \textbf{Fallacy of False Experts.} Tiger Woods addressed a Senate Panel on the issue of aid to the country of Zimberia. {\color{blue} Tiger Woods is a well known professional golfer, and he isn't known for or experienced in international aid.  He may bias the Senate Panel based solely on his fame/respect as a good golfer and not knowledge or experience in international aid.}
+    
+    \item[25.] \textbf{Fallacy of the Loaded Question.} (a) Have you stopped beating your wife? (b) You look good in this suit; will it be cash or charge?  {\color{blue} Both of these questions assume something prior to asking the question, (a) that you beat your wife in the first place and (b) that you are going to buy the suit.}
+    
+    \item[26.] \textbf{Fallacy of Composition.} (a) Your essay is too long; therefore, each sentence in your essay is too log. (b) The choral presentation was too loud; therefore, the tenors were too loud. {\color{blue} This fallacy assumes the condition being addressed extrapolates from a part of the system to the entire system or vice versa.}
+    
+    \item[27.] \textbf{Fallacy of False Cause.} I saw a black cat; I lost my pocketbook.  Seeing a black cat brings bad luck.  {\color{blue} Two unrelated events seem related or have some causation relationship just because they happen close together in space or time.}
+    
+    \item[28.] Write one additional example of each of the following:
+    
+    (a) Fallacy of False Experts {\color{blue} Using a celebrity in the advertisement of a new medicine.}
+    
+    (b) Fallacy of the Loaded Question {\color{blue} The police asking someone "Why were you speeding?"}
+    
+    (c) Fallacy of Composition {\color{blue} Everything is bigger in Texas.}
+    
+    (d) Fallacy of False Cause {\color{blue} Baseball players wearing the same socks during a winning streak.}
+    
+    
 \end{itemize}
 \end{document}
-
